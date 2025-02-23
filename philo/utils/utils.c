@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philosophers.h                                     :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yabenman <yabenman@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/23 20:25:41 by yabenman          #+#    #+#             */
-/*   Updated: 2025/02/23 20:38:01 by yabenman         ###   ########.fr       */
+/*   Created: 2025/02/23 20:34:25 by yabenman          #+#    #+#             */
+/*   Updated: 2025/02/23 20:45:04 by yabenman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILOSOPHERS_H
-# define PHILOSOPHERS_H
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <pthread.h>
+#include "../inc/philosophers.h"
 
-int		ph_error(char *s);
 
-int		ft_atoi(const char *str);
-int		ft_isspace(int c);
-void	ft_putstr_fd(char *s, int fd);
-
-#endif
+int	ph_error(char *s)
+{
+	ft_putstr_fd(s, 2);
+	return (1);
+}
